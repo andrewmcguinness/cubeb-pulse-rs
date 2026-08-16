@@ -266,7 +266,7 @@ impl std::fmt::Debug for BufferManager {
 /// as a volume control position, and the samples will be multiplied by
 /// that value cubed.
 fn calc_volume_multiplier(position: f32) -> f32 {
-    return position * position * position;
+    position * position * position
 }
 
 #[repr(C)]
