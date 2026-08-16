@@ -790,7 +790,6 @@ impl StreamOps for PulseStream<'_> {
                     let _mainloop_lock = self.context.mainloop.lock_guard();
                     self.volume = volume;
                     self.volume_multiplier = calc_volume_multiplier(volume);
-                    self.context.mainloop.unlock();
                     Ok(())
                 } else {
                     cubeb_log!("Error: set_volume: no context?");
